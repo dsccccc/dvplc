@@ -40,7 +40,7 @@ jobs:
         run: |
           mkdir $output_dir
           ls $input_dir
-          dvplc decode $file_name --mirror-to $output_dir
+          dvplc decode --mirror-to $output_dir $file_name 
 
       - name: Update
         uses: actions/upload-artifact@v4
