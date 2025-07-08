@@ -21,7 +21,7 @@ jobs:
       # book_num: ${{ github.event.inputs.book_num }}
       file_name: ${{ github.event.inputs.file_name }}
       output_name: ${{ github.event.inputs.output_name }}
-      output_dir: ./download/
+      output_dir: ./alt/
 
     steps:
       - uses: actions/checkout@v4
@@ -37,7 +37,7 @@ jobs:
 
       - name: Run
         run: |
-          mkdir $output_dir
+          cd $output_dir
           dvplc encode $file_name
 
 
