@@ -1,0 +1,51 @@
+name: Encoder
+
+on:
+  workflow_dispatch:
+    inputs:
+        
+      file_name:
+        type: string
+        default: GraphicsPresets.yaml
+        required: false
+
+      output_name:
+        type: string
+        default: GraphicsPresets.yaml.dvpl
+        required: false
+        
+jobs:
+  worker:
+    runs-on: ubuntu-latest
+    env:
+      # book_num: ${{ github.event.inputs.book_num }}
+      file_name: ${{ github.event.inputs.file_name }}
+      output_name: ${{ github.event.inputs.output_name }}
+      output_dir: ./download/
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Dependency
+        run: |
+          python -m pip install --upgrade pip
+          pip install git+https://github.com/Jylpah/dvplc.git
+
+      - name: Run
+        run: |
+          mkdir $output_dir
+          dvplc encode $file_name
+
+
+      - name: Update
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.output_name }}
+          path: ${{ env.output_dir }}
+          if-no-files-found: error
+          retention-days: 1
+      
