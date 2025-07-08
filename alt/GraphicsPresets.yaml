@@ -1,0 +1,331 @@
+---
+Compatible:
+  options:
+    WaterQuality: Low
+    ObjectsQuality: Compatible
+    VehiclesQuality: Compatible
+    EffectsQuality: Compatible
+    LevelOfDetail: Compatible
+    FogQuality: Compatible
+    GrassQuality: Compatible
+    GrassInSniperMode: false
+    ShadowQuality: Off
+    TankTreads: false
+    HitMarks: false
+    HDTextures: true
+    HalfResolution: true
+    HalfResolutionV2: Static
+    FPSLimit: 30
+    Camouflage: ForAll
+    AnisotropicFiltering: Off
+    Antialiasing: Off
+    VSync: true
+    TankSuspension: false
+Low:
+  options:
+    WaterQuality: Low
+    ObjectsQuality: Low
+    VehiclesQuality: Low
+    EffectsQuality: Low
+    LevelOfDetail: Low
+    FogQuality: Low
+    GrassQuality: Compatible
+    GrassInSniperMode: false
+    ShadowQuality: Off
+    TankTreads: false
+    HitMarks: false
+    HDTextures: true
+    HalfResolution: false
+    HalfResolutionV2: Dynamic
+    FPSLimit: 60
+    Camouflage: ForAll
+    AnisotropicFiltering: Off
+    Antialiasing: Off
+    VSync: true
+    TankSuspension: false
+Medium:
+  options:
+    WaterQuality: Medium
+    ObjectsQuality: Medium
+    VehiclesQuality: Medium
+    EffectsQuality: Medium
+    LevelOfDetail: Medium
+    FogQuality: Medium
+    GrassQuality: Low
+    GrassInSniperMode: false
+    ShadowQuality: Low
+    HitMarks: false
+    TankTreads: false
+    HDTextures: true
+    HalfResolution: false
+    HalfResolutionV2: Dynamic
+    FPSLimit: 60
+    Camouflage: ForAll
+    AnisotropicFiltering: Off
+    Antialiasing: Off
+    VSync: true
+    TankSuspension: false
+High:
+  options:
+    WaterQuality: High
+    ObjectsQuality: High
+    VehiclesQuality: High
+    EffectsQuality: High
+    LevelOfDetail: High
+    FogQuality: High
+    GrassQuality: High
+    GrassInSniperMode: true
+    ShadowQuality: Medium
+    HitMarks: true
+    TankTreads: false
+    HDTextures: true
+    HalfResolution: false
+    HalfResolutionV2: Dynamic
+    FPSLimit: 60
+    Camouflage: ForAll
+    AnisotropicFiltering: Off
+    Antialiasing: Off
+    VSync: true
+    TankSuspension: true
+default:
+  base: High
+iOS: 
+  base: Medium
+MacOSDefault:
+  base: High
+  options:
+    ObjectsQuality: Medium
+    FPSLimit: 120
+  optionsMax:
+    ObjectsQuality: High
+  selectors:
+    - "MacOS"
+Android:
+  options:
+    GrassQuality: Compatible
+    ObjectsQuality: Compatible
+    VehiclesQuality: Compatible
+  optionsMax:
+    ObjectsQuality: High
+    LevelOfDetail: High
+    GrassQuality: High
+    ShadowQuality: High
+    HalfResolution: false
+  base: Low
+Windows.Desktop:
+  base: High
+  options:
+    HitMarks: false
+    HalfResolutionV2: Off
+Nintendo Switch: 
+  options:
+    WaterQuality: High
+    ObjectsQuality: Medium
+    VehiclesQuality: Medium
+    EffectsQuality: Medium
+    LevelOfDetail: High
+    FogQuality: High
+    GrassQuality: High
+    GrassInSniperMode: true
+    ShadowQuality: Medium
+    HitMarks: true
+    TankTreads: true
+    HDTextures: true
+    HalfResolution: false
+    HalfResolutionV2: Dynamic
+    FPSLimit: 30
+    Camouflage: ForAll
+    AnisotropicFiltering: 16X
+    Antialiasing: Off
+    TankSuspension: false
+A7Ios:
+  base: Low
+  options:
+    FPSLimit: 30
+  optionsMax:
+    ObjectsQuality: High
+    LevelOfDetail: High
+    GrassQuality: High
+    ShadowQuality: Medium
+    FPSLimit: 60
+  selectors: 
+    - "ios-a7-cpu"
+A8Ios:  # A8 cpu
+  base: Medium
+  options:
+    GrassQuality: Compatible
+    ShadowQuality: Off
+  optionsMax:
+    ShadowQuality: Medium
+    ObjectsQuality: High
+    LevelOfDetail: High
+    GrassQuality: High
+  selectors: 
+    - "ios-a8-cpu"
+A8XIos:  # A8X cpu
+  base: A8Ios
+  options:
+    TankTreads: true
+  selectors: 
+    - "ios-a8x-cpu"
+A9Ios:  # A9 cpu
+  base: A8XIos
+  options:
+    VehiclesQuality: High
+  selectors: 
+    - "ios-a9-cpu"
+A9XIos:  # A9X cpu
+  base: High
+  options:
+    ShadowQuality: Medium
+    GrassQuality: Low
+  optionsMax:
+    ShadowQuality: High
+    GrassQuality: High
+  selectors: 
+    - "ios-a9x-cpu"
+A10Ios:  # A10 cpu
+  base: A9XIos
+  options:
+    TankTreads: true
+    TankSuspension: true
+  selectors: 
+    - "ios-a10-cpu"
+A10XIos:  # A10X cpu
+  base: A10Ios
+  selectors: 
+    - "ios-a10x-cpu"
+A11Ios:  # A11 cpu
+  base: A10XIos
+  selectors: 
+    - "ios-a11-cpu"
+A12Ios:  # A12 cpu
+  base: A11Ios
+  selectors: 
+    - "ios-a12-cpu"
+A12XIos:  # A12X cpu
+  base: A12Ios
+  selectors: 
+    - "ios-a12x-cpu"
+A12ZIos:  # A12Z cpu
+  base: A12XIos
+  selectors:
+    - "ios-a12z-cpu"
+A13Ios:  # A13 cpu
+  base: A12ZIos
+  selectors:
+    - "ios-a13-cpu"
+A14Ios:  # A14 cpu or higher
+  base: A13Ios
+  selectors:
+    - "ios-a14-cpu"
+MacbookAirLow:
+  base: Low
+  options:
+    ObjectsQuality: Compatible
+    VehiclesQuality: Compatible
+    HalfResolutionV2: Off
+  optionsMax:
+    ObjectsQuality: High
+  selectors:
+    - ["MacOS", "MacBookAir1,1"]
+    - ["MacOS", "MacBookAir2,1"]
+    - ["MacOS", "MacBookAir3,1"]
+    - ["MacOS", "MacBookAir3,2"]
+    - ["MacOS", "MacBookAir4,1"]
+    - ["MacOS", "MacBookAir4,2"]
+Android4:
+  base: Android
+  optionsMax:
+    FogQuality: Medium
+  selectors:
+    - ["Android", "4"]
+AndroidLowTier:
+  base: Compatible
+  options:
+    HalfResolution: false
+    HalfResolutionV2: Dynamic
+  optionsMax:
+    LevelOfDetail: High
+    GrassQuality: High
+    ShadowQuality: High
+  selectors:
+    - ["Android", "android-low-tier"]
+AndroidMediumTier:
+  base: Medium
+  options:
+    GrassQuality: Compatible
+    ShadowQuality: Off
+    HitMarks: true
+    TankTreads: true
+  optionsMax:
+    LevelOfDetail: High
+    GrassQuality: High
+    ShadowQuality: High
+  selectors:
+    - ["Android", "android-medium-tier"]
+AndroidHighTier:
+  base: High
+  options:
+    TankTreads: true
+    ShadowQuality: Low
+  optionsMax:
+    LevelOfDetail: High
+    GrassQuality: High
+    ShadowQuality: High
+    HalfResolution: false
+  selectors:
+    - ["Android", "android-high-tier"]
+Samsung120Hz:
+  base: AndroidMediumTier
+  options:
+    FPSLimit: 120
+  selectors:
+   - ["Android", "manufacturer-samsung", "maxFps-120"]
+SamsungS8:
+  base: AndroidMediumTier
+  selectors:
+   - ["Android", "manufacturer-samsung", "SM-G950F"] #S8
+   - ["Android", "manufacturer-samsung", "SM-G950N"] #S8
+   - ["Android", "manufacturer-samsung", "SM-G9500"] #S8
+   - ["Android", "manufacturer-samsung", "SM-G955F"] #S8+
+   - ["Android", "manufacturer-samsung", "SM-G955N"] #S8+
+   - ["Android", "manufacturer-samsung", "SM-G955X"] #S8+
+   - ["Android", "manufacturer-samsung", "SM-G955FD"] #S8+
+SamsungS9:
+  base: AndroidMediumTier
+  selectors:
+   - ["Android", "manufacturer-samsung", "SM-G960F"] #S9
+   - ["Android", "manufacturer-samsung", "SM-G960N"] #S9
+   - ["Android", "manufacturer-samsung", "SM-G960X"] #S9
+   - ["Android", "manufacturer-samsung", "SM-G965F"] #S9+
+   - ["Android", "manufacturer-samsung", "SM-G965N"] #S9+
+   - ["Android", "manufacturer-samsung", "SM-G965X"] #S9+
+WindowsLowTier:
+  base: Low
+  selectors: 
+    - "windows-low-tier"
+  options:
+    ObjectsQuality: Compatible
+    VehiclesQuality: Low
+    GrassQuality: Compatible
+    HalfResolutionV2: Off
+  optionsMax:
+    ObjectsQuality: High
+WindowsHighTier:
+  base: High
+  selectors: 
+    - "windows-high-tier"
+  options:
+    ShadowQuality: High
+    AnisotropicFiltering: 4X
+    TankTreads: true
+    HalfResolutionV2: Off
+WindowsUltraTier:
+  base: WindowsHighTier
+  selectors:
+    - "windows-ultra-tier"
+  options:
+    TankTreads: true
+    AnisotropicFiltering: 16X
+    Antialiasing: 4X
