@@ -40,13 +40,13 @@ jobs:
         run: |
           mkdir $output_dir
           cd $input_dir
-          dvplc decode --mirror-to $output_dir $file_name 
+          dvplc decode $file_name 
 
       - name: Update
         uses: actions/upload-artifact@v4
         with:
           name: ${{ env.output_name }}
-          path: ${{ env.output_dir }}
+          path: ${{ env.input_dir }}
           if-no-files-found: error
           retention-days: 1
       
