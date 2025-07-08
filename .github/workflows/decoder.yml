@@ -38,7 +38,7 @@ jobs:
 
       - name: Run
         run: |
-          mkdir $input_dir
+          mkdir $output_dir
           ls $input_dir
           dvplc decode $file_name --mirror-to $output_dir
 
