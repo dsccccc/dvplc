@@ -81,7 +81,7 @@ High:
     HDTextures: true
     HalfResolution: false
     HalfResolutionV2: Dynamic
-    FPSLimit: 60
+    FPSLimit: 120
     Camouflage: ForAll
     AnisotropicFiltering: Off
     Antialiasing: Off
@@ -98,6 +98,7 @@ MacOSDefault:
     FPSLimit: 120
   optionsMax:
     ObjectsQuality: High
+    FPSLimit: 120
   selectors:
     - "MacOS"
 Android:
