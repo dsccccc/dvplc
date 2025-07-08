@@ -6,12 +6,12 @@ on:
         
       file_name:
         type: string
-        default: GraphicsPresets.yaml.dvpl
+        default: ./
         required: false
 
       output_name:
         type: string
-        default: GraphicsPresets.yaml
+        default: dvpl.tar
         required: false
         
 jobs:
@@ -40,7 +40,8 @@ jobs:
         run: |
           mkdir $output_dir
           cd $input_dir
-          dvplc decode $file_name 
+          dvplc decode $file_name
+          tar -cvf $output_name $file_name
 
       - name: Update
         uses: actions/upload-artifact@v4
