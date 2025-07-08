@@ -37,7 +37,6 @@ jobs:
 
       - name: Run
         run: |
-          mkdir $output_dir
           dvplc decode $file_name
 
 
