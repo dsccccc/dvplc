@@ -22,6 +22,7 @@ jobs:
       file_name: ${{ github.event.inputs.file_name }}
       output_name: ${{ github.event.inputs.output_name }}
       output_dir: ./download/
+      input_dir: ./ori/
 
     steps:
       - uses: actions/checkout@v4
@@ -37,8 +38,9 @@ jobs:
 
       - name: Run
         run: |
-          dvplc decode $file_name
-
+          mkdir $input_dir
+          ls $input_dir
+          dvplc decode $file_name --mirror-to $output_dir
 
       - name: Update
         uses: actions/upload-artifact@v4
